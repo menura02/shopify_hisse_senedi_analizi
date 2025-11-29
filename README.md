@@ -1,7 +1,7 @@
 
 # Giriş
 
-Bu proje, Basit Doğrusal Regresyon (Linear Regression) ve Polinom Regresyon (Polynomial Regression) tekniklerini kullanarak Shopify hisse senedi fiyat trendini modellemeyi amaçlar.
+Bu projede Basit Doğrusal Regresyon ve Polinom Regresyon tekniklerini kullanarak Shopify hisse senedi fiyat trendini modellemeyi amaçladım.
 
 Çalışma boyunca kullandığım kütüphaneler:
 
@@ -69,7 +69,7 @@ Gözlem: Doğrusal model hissenin genel olarak arttığını gösteren yukarı y
 
 Grafikte verilerimiz düz bir çizgi gibi hareket etmediği için, verideki eğrileri ve dalgalanmaları yakalayabileceğini düşündüğüm Polinom Regresyon'u denemeye karar verdim.
 
-Scikit-learn kütüphanesindeki PolynomialFeatures aracını kullanarak tarih verisinin 4. dereceden üslerini aldım. **Bu dereceyi seçmemimin nedeni**, Shopify hissesinin "Yükseliş -> Zirve -> Düşüş -> Toparlanma" şeklindeki karmaşık döngüsünü yakalamaktı. **Dereceyi 50 gibi yüksek bir sayı yapsaydım** eğitim başarısı %99'a yakın bir değer olurdu ama bu **overfitting yaşanmasına sebebiyet verirdi**. Ufak bir tarih değişikliğinde yüksek fiyat değişikliklerine sebebiyet verirdi.
+Scikit-learn kütüphanesindeki PolynomialFeatures aracını kullanarak tarih verisinin 4. dereceden üslerini aldım. **Bu dereceyi seçmemimin nedeni**, Shopify hissesinin "Yükseliş -> Zirve -> Düşüş -> Toparlanma" şeklindeki karmaşık döngüsünü yakalamaktı. **Dereceyi 50 gibi yüksek bir sayı yapsaydım** eğitim başarısı %99'a yakın bir değer olurdu ama bu **overfitting yaşanmasına sebebiyet verirdi**. Ufak bir tarih değişikliğinde yüksek fiyat değişiklikleri gözlemlerdik.
 
 ```python
 from sklearn.preprocessing import PolynomialFeatures
